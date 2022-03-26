@@ -22,6 +22,13 @@ const QUERY_PROFILE = gql`
 			totalPublications
 			totalCollects
 		  }
+		  picture {
+			... on MediaSet {
+			  original {
+				url
+			  }
+			}
+		  }
   }
   }
   }
@@ -90,7 +97,7 @@ const Display = ({ request }) => {
 					  <div className="relative">
 						  <img
 							alt="..."
-							src="https://picsum.photos/800/800"
+							src={data.profiles.items[0].picture.original.url}
 							className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
 							style={{ maxWidth: "150px" }}
 						  />
@@ -156,9 +163,9 @@ const Display = ({ request }) => {
 						  <a
 							href={data.profiles.items[0].twitterUrl}
 							className="font-normal text-violet-500"
-							onClick={e => e.preventDefault()}
+							//onClick={e => e.preventDefault()}
 						  >
-							Follow {data.profiles.items[0].name} on Twitter
+							{data.profiles.items[0].name}'s Twitter
 						  </a>
 						</div>
 					  </div>

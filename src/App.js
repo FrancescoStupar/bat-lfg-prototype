@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import { Switch, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Profile from './pages/profile';
-import Menu from './pages/menu';
+import Lens from './pages/lens';
 import Footer from './components/Footer';
 import Dropdown from './components/Dropdown';
 
@@ -31,7 +31,7 @@ return (
     <Dropdown isOpen={isOpen} toggle={toggle} />
     <Switch>
        <Route path='/' exact component={Home} />
-       <Route path='/menu' component={Menu} />
+       <Route path='/lens' component={Lens} />
        <Route path='/profile' component={Profile} />
     </Switch>
     <Footer />

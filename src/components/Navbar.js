@@ -15,7 +15,7 @@ const Navbar = ({ toggle }) => {
     <div className="pr-8 md:block hidden">
         <Link className='p-4' to='/'>Home</Link>
         <Link className='p-4' to='/profile'>Profile</Link>
-        <Link className='p-4' to='/menu'>Why Lens</Link>
+        <Link className='p-4' to='/lens'>Why Lens</Link>
     </div>
   </nav>
   )
