@@ -52,9 +52,6 @@ const Query = () => {
 	}
 
 
-
-
-
 const APIURL = 'https://api-mumbai.lens.dev/';
 
 const client = new ApolloClient({
@@ -70,7 +67,6 @@ const request = {"ownedBy" : ["0x3A5bd1E37b099aE3386D13947b6a90d97675e5e3"]}
 useEffect(() => {
     checkIfWalletIsConnected();
   }, [])
-
 
 return(
 	<ApolloProvider client={client}>
