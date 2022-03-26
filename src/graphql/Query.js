@@ -64,7 +64,7 @@ const client = new ApolloClient({
 
 // CHANGE BELOW TO {"profileIds" : [currentAccount]}
 
-const request = {"profileIds" : [0x3A5bd1E37b099aE3386D13947b6a90d97675e5e3]}
+const request = {"ownedBy" : [0x3A5bd1E37b099aE3386D13947b6a90d97675e5e3]}
 
 
 useEffect(() => {
